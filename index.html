@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bloom & Glow – Handmade Cosmetics</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+   <link href="https://cdn.reflowhq.com/v2/toolkit.min.css" rel="stylesheet" />
+   <link rel="stylesheet" href="style.css">
+
+  <script src="https://cdn.reflowhq.com/v2/toolkit.js?store=123554224" defer></script>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#sidebar" data-bs-offset="-100" tabindex="0">
+  <!-- Right‑side Navbar -->
+  <nav id="sidebar" class="d-flex flex-column align-items-center p-4">
+    <!-- Logo -->
+    <a href="#home" class="navbar-brand mb-4">
+      <img src="images/glowing-jar -con_noBK.png" alt="Natural Glow’n Beauty logo" class="img-fluid" style="max-width:140px;">
+    </a>
+    <!-- Nav links -->
+    <ul class="nav nav-pills flex-column gap-2 text-center w-100">
+       <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="privacy.html">Privacy Policy</a></li>
+          <li class="nav-item"><a class="nav-link " href="terms.html">Terms & Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
+    </ul>
+  </nav>
+
+  <div class="content-wrapper">
+
+    <!-- Home / Hero -->
+    <section id="home" class="hero">
+      <div class="hero-content container">
+        <h1 class="display-4 fw-semibold">Nature‑Inspired Beauty</h1>
+        <p class="lead mb-4">Small‑batch, handcrafted cosmetics made with love (and science!).</p>
+        <a href="shop.html" class="btn btn-lg btn-light shadow">Shop Now</a>
+      </div>
+    </section>
+
+
+    <div class="container py-5">
+  <h1 class="mb-4 text-center">Shop Best-Sellers</h1>
+  <div class="row g-4 justify-content-center">
+
+    <!-- Product 1 -->
+    <div class="col-12">
+      <div class="card flex-row shadow-sm h-100">
+        <div class="card-body d-flex align-items-center">
+          <div data-reflow-type="product" data-reflow-product="1479225712"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="col-12">
+      <div class="card flex-row shadow-sm h-100">
+        <div class="card-body d-flex align-items-center">
+          <div data-reflow-type="product" data-reflow-product="924266434"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="col-12">
+      <div class="card flex-row shadow-sm h-100">
+        <div class="card-body d-flex align-items-center">
+          <div data-reflow-type="product" data-reflow-product="1204841443"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="text-center mt-4">
+    <a href="shop.html" class="btn btn-primary btn-lg">View Full Shop</a>
+  </div>
+</div>
+
+    <!-- Contact -->
+    <section id="contact" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="fw-bold text-center mb-4">Get in Touch</h2>
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <form class="row g-3">
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="firstName" placeholder="First Name" required />
+                  <label for="firstName">First Name</label>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="lastName" placeholder="Last Name" required />
+                  <label for="lastName">Last Name</label>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-floating">
+                  <input type="email" class="form-control" id="email" placeholder="name@example.com" required />
+                  <label for="email">Email address</label>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-floating">
+                  <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 140px" required></textarea>
+                  <label for="message">Message</label>
+                </div>
+              </div>
+              <div class="col-12 text-center">
+                <button class="btn btn-primary btn-lg px-5" type="submit">Send Message</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="py-4 text-center border-top">
+      <p class="mb-0 small">© <span id="year"></span> Naturally Glow'n Beauty. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+  <!-- Bootstrap JS & year script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Update footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+<script
+  src="https://cdn.reflowhq.com/v2/toolkit.min.js"
+  data-reflow-project="123554224"
+  defer
+></script>
+</body>
+</html>

@@ -1,0 +1,242 @@
+/* ===== Theme Variables ===== */
+:root {
+  /* brand peaches */
+  --peach-deep:  #eaa67f;  /* darker  • good for navbar, buttons */
+  --peach-light: #f5d3ba;  /* lighter • nice for page backgrounds */
+
+  /* overwrite the light‑background & brand colors we set earlier */
+  --bg-light: var(--peach-light);
+  --brand-primary: var(--peach-deep);
+}
+
+/* ===== Global ===== */
+body {
+  background: var(--bg-light);
+}
+
+/* ===== Sidebar (right‑pinned) ===== */
+#sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: var(--sidebar-w);
+  height: 100vh;
+  background: #f8f9fa;
+  border-left: 1px solid #dee2e6;
+  z-index: 1020;
+}
+
+#sidebar .nav-link {
+  color: #495057;
+  font-weight: 500;
+}
+
+#sidebar .nav-link.active {
+  background: #e7f1ff;
+  color: var(--brand-primary);
+}
+
+/* leave space for sidebar */
+.content-wrapper {
+  margin-right: var(--sidebar-w);
+}
+
+/* ===== Hero ===== */
+.hero {
+  background: url('images/Organic\ logo\ with\ glowing\ jar\ icon.png')
+              center/cover no-repeat;
+  color: #fff;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+.hero-content { position: relative; z-index: 1; }
+
+/* ===== Generic Card Style ===== */
+.card {
+  background: var(--card-bg);
+  border-color: var(--card-border);
+}
+
+/* ===== “Product Card” (grid on homepage) ===== */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  overflow: hidden;
+}
+
+.product-card > [data-reflow-type="product"] {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-card img {
+  max-height: 150px;
+  margin: 0 auto 1rem;
+  object-fit: contain;
+}
+
+.product-description {
+  max-height: 70px;
+  overflow-y: auto;
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.product-card button { margin-top: auto; }
+
+/* ===== Reflow Product‑List (horizontal cards) ===== */
+.reflow-product-list {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;   /* single‑column list */
+}
+
+.reflow-product-list .rf-product {
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,.075);
+  display: flex;
+  gap: 1.25rem;
+  padding: 1rem 1.25rem;
+}
+
+.reflow-product-list .rf-product__image {
+  flex: 0 0 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reflow-product-list .rf-product__image img {
+  max-width: 100%;
+  max-height: 160px;
+  object-fit: contain;
+  border-radius: 0.25rem;
+}
+
+.reflow-product-list .rf-product__info {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.reflow-product-list .rf-product__title {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+
+.reflow-product-list .rf-product__price {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-top: auto;
+  color: var(--brand-primary);
+}
+
+.reflow-product-list .rf-product__addtocart { width: 100%; }
+
+/* Mobile tweak – stack image on top */
+@media (max-width: 575.98px) {
+  .reflow-product-list .rf-product {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  .reflow-product-list .rf-product__image { margin-bottom: 0.75rem; }
+  .reflow-product-list .rf-product__info { align-items: center; }
+}
+
+/* ===== About Page Blocks ===== */
+.about-hero {
+  background: #fdfdfd;
+  padding: 4rem 0;
+}
+.about-hero h1 { font-size: 2.5rem; }
+.about-section { padding: 3rem 0; }
+
+/* ===== Contact Section ===== */
+.contact-section { padding: 4rem 0; }
+
+/* ===== Policy & Terms Pages ===== */
+.policy-section,
+.terms-section {
+  padding: 4rem 1rem;
+  max-width: 900px;
+  margin: auto;
+}
+.policy-section h1,
+.terms-section h1,
+.policy-section h2,
+.terms-section h2 { margin-top: 2rem; }
+
+/* ===== Cart Page ===== */
+.cart-wrapper { max-width: 900px; margin-inline: auto; }
+.navbar {
+  background: var(--peach-deep) !important;   /* force override */
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link {
+  color: #ffffff !important;                  /* white text for contrast */
+}
+
+.navbar .nav-link.active,
+.navbar .nav-link:hover {
+  color: #ffeada !important;                  /* a pale tint on hover / active */
+}
+
+.btn-primary,
+.reflow-product-list .rf-product__price {
+  background: var(--peach-deep);
+  border-color: var(--peach-deep);
+}
+
+.btn-primary:hover {
+  background: #d88d62;   /* 10–15 % darker for hover state */
+  border-color: #d88d62;
+}
+
+.card,
+.reflow-product-list .rf-product {
+  background: #fff9f4;        /* whisper‑peach */
+  border-color: #f0cab0;
+}
+/* === Right‑side Sidebar Color === */
+#sidebar {
+  background: var(--peach-deep);   /* same deep peach */
+}
+
+/* links inside the sidebar */
+#sidebar .nav-link {
+  color: #ffffff;                  /* white text */
+}
+
+/* active & hover state for sidebar links */
+#sidebar .nav-link.active,
+#sidebar .nav-link:hover {
+  background: rgba(255,255,255,0.12); /* subtle white overlay */
+  color: #ffeada;                       /* pale peach text */
+}
+
+/* tweak the small border on left side of sidebar */
+#sidebar {
+  border-left: none; /* remove gray line */
+  box-shadow: -1px 0 4px rgba(0,0,0,0.05); /* soft inner shadow instead */
+}
